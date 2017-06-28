@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.appstore.dao.PictureDao" >
+  <resultMap id="Picture" type="com.appstore.entity.Picture" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="appId" property="appId" jdbcType="BIGINT" />
+    <result column="picName" property="picName" jdbcType="VARCHAR" />
+    <result column="picPath" property="picPath" jdbcType="VARCHAR" />
+    <result column="module" property="module" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="getLogoPicByAppId" resultType="Picture" parameterType="long">
+    SELECT *
+    FROM _picture
+    WHERE module='LOGO' AND appId=#{appId}
+  </select>
+  <select id="getDisplaysPicByAppId" resultType="Picture">
+    SELECT *
+    FROM _picture
+    WHERE module LIKE '%DISPLAY%' AND appId=#{appId}
+  </select>
+  <select id="getDisplayPicByAppIdAndModuleIndex" resultType="Picture">
+    SELECT *
+    FROM _picture
+    WHERE module = #{moduleIndex} AND appId=#{appId}
+  </select>
+  <insert id="save" parameterType="com.appstore.entity.Picture" >
+    INSERT ignore INTO _picture
+    (appId,picName,picPath,module)
+    VALUES
+    (#{appId},#{picName},#{picPath},#{module});
+  </insert>
+  <update id="updatePicByAppId">
+    UPDATE _picture set picPath=#{picPath},picName=#{picName} WHERE appId=#{appId} AND module=#{moduleName};
+  </update>
+</mapper>

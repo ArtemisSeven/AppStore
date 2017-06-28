@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--设置全局属性-->
+    <settings>
+        <!--使用jdbc的getGeneratedKeys 获取记录的自增长的id的值-->
+        <setting name="useGeneratedKeys" value="true"/>
+        <!--使用列别名替代表的列名-->
+        <setting name="useColumnLabel" value="true"/>
+        <!--表的列名转换成实体类的属性名时使用驼峰命名法(create_time)->(createTime)-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+</configuration>

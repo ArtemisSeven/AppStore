@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.appstore.dao.TypeDao" >
+  <resultMap id="Type" type="com.appstore.entity.Type" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="typeName" property="typeName" jdbcType="VARCHAR" />
+  </resultMap>
+  <select id="getTypeByName" resultType="Type">
+    SELECT *
+    FROM _type
+    WHERE typeName=#{typeName}
+  </select>
+  <insert id="saveType">
+    INSERT ignore INTO _type (typeName)
+    VALUES (#{typeName})
+  </insert>
+  <select id="getTypeLimit" resultType="Type">
+    SELECT *
+    FROM _type
+    ORDER BY id DESC
+    LIMIT #{offset},#{limit};
+  </select>
+  <select id="getAllType" resultType="Type">
+    SELECT *
+    FROM _type
+    ORDER BY id DESC;
+  </select>
+  <select id="searchByKeywordLimit" resultType="Type">
+    SELECT *
+    FROM _type
+    where typeName LIKE CONCAT('%',#{keyword},'%')
+    ORDER BY id DESC
+    LIMIT #{offset},#{limit};
+  </select>
+  <select id="searchByKeyword" resultType="Type">
+  SELECT *
+  FROM _type
+  where typeName LIKE CONCAT('%',#{keyword},'%')
+  ORDER BY id DESC;
+</select>
+  <select id="getTypeById" resultType="Type">
+    SELECT *
+    FROM _type
+    where id = #{id}
+  </select>
+  <delete id="deleteById" parameterType="int">
+    DELETE FROM _type WHERE id=#{typeId};
+  </delete>
+  <update id="updateTypeName">
+    UPDATE _type
+    set typeName=#{newTypeName}
+    WHERE typeName=#{oldTypeName};
+  </update>
+</mapper>

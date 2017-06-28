@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.appstore.dao.AppDao">
+    <resultMap id="App" type="com.appstore.entity.App">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="typeId" property="typeId" jdbcType="BIGINT"/>
+        <result column="appName" property="appName" jdbcType="VARCHAR"/>
+        <result column="company" property="company" jdbcType="VARCHAR"/>
+        <result column="os" property="os" jdbcType="VARCHAR"/>
+        <result column="downloadCount" property="downloadCount" jdbcType="BIGINT"/>
+        <result column="ratingCount" property="ratingCount" jdbcType="BIGINT"/>
+        <result column="avgScore" property="avgScore" jdbcType="TINYINT"/>
+        <result column="size" property="size" jdbcType="DOUBLE"/>
+        <result column="version" property="version" jdbcType="VARCHAR"/>
+        <result column="updateTime" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="fileName" property="fileName" jdbcType="VARCHAR"/>
+        <result column="filePath" property="filePath" jdbcType="VARCHAR"/>
+        <result column="state" property="state" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="LONGVARCHAR"/>
+    </resultMap>
+    <select id="searchByStateAndKeywordLimit" resultType="App">
+    SELECT *
+    FROM _app
+    where appName LIKE CONCAT('%',#{keyword},'%')
+    AND state=#{state}
+    ORDER BY id DESC
+    LIMIT #{offset},#{limit};
+  </select>
+    <select id="searchByStateAndKeyword" resultType="App">
+    SELECT *
+    FROM _app
+    where appName LIKE CONCAT('%',#{keyword},'%')
+    AND state=#{state}
+    ORDER BY id DESC;
+  </select>
+    <select id="searchByKeywordLimit" resultType="App">
+        SELECT *
+        FROM _app
+        where appName LIKE CONCAT('%',#{keyword},'%')
+        ORDER BY id DESC
+        LIMIT #{offset},#{limit};
+    </select>
+    <select id="searchByKeyword" resultType="App">
+    SELECT *
+    FROM _app
+    where appName LIKE CONCAT('%',#{keyword},'%')
+    ORDER BY id DESC;
+  </select>
+    <select id="getAppByAppName" resultType="App">
+        SELECT *
+        FROM _app
+        where appName = #{appName};
+    </select>
+    <select id="checkAppNameExist" resultType="App">
+        SELECT *
+        FROM _app
+        where appName = #{appName};
+    </select>
+    <select id="getAppById" resultType="App">
+        SELECT *
+        FROM _app
+        where id = #{id};
+    </select>
+    <select id="getNameById" resultType="String">
+        SELECT appName
+        FROM _app
+        where id = #{id};
+    </select>
+    <select id="getIdAndName" resultType="App">
+        SELECT id,appName
+        FROM _app
+        where state='ON'
+    </select>
+    <select id="getAllAppByAvgScore" resultType="App">
+        SELECT *
+        FROM _app
+        where state='ON'
+        order by avgScore desc;
+    </select>
+    <select id="getAllAppByDownloadCount" resultType="App">
+        SELECT *
+        FROM _app
+        where state='ON'
+        order by downloadCount desc;
+    </select>
+    <select id="getAllAppByAvgScoreLimit" resultType="App">
+        SELECT *
+        FROM _app
+        where state='ON'
+        order by avgScore desc
+        LIMIT #{offset},#{limit};
+    </select>
+    <select id="getAllAppByDownloadCountLimit" resultType="App">
+        SELECT *
+        FROM _app
+        where state='ON'
+        order by downloadCount desc
+        LIMIT #{offset},#{limit};
+    </select>
+    <select id="getAllAppByTypeId" resultType="App">
+        SELECT *
+        FROM _app
+        where state='ON' AND typeId=#{typeId}
+    </select>
+    <select id="getAllAppByTypeIdLimit" resultType="App">
+        SELECT *
+        FROM _app
+        where state='ON' AND typeId=#{typeId}
+        LIMIT #{offset},#{limit};
+    </select>
+    <insert id="save" useGeneratedKeys="true" parameterType="com.appstore.entity.App" keyProperty="id">
+        INSERT ignore INTO _app
+        (typeId,appName,company,description,os,downloadCount,ratingCount,avgScore,size,version,updateTime,fileName,filePath,state)
+        VALUES
+        (#{typeId},#{appName},#{company},#{description},#{os},#{downloadCount},#{ratingCount},#{avgScore},#{size},#{version},#{updateTime},#{fileName},#{filePath},#{state});
+    </insert>
+    <delete id="deleteById">
+        DELETE FROM _app where id=#{id}
+    </delete>
+    <update id="updateFilePathById">
+        UPDATE _app SET filePath=#{value} WHERE id=#{id}
+    </update>
+    <update id="updateFileNameById">
+        UPDATE _app SET fileName=#{value} WHERE id=#{id}
+    </update>
+    <update id="updateAppNameById">
+        UPDATE _app SET appName=#{value} WHERE id=#{id}
+    </update>
+    <update id="updateVersionById">
+        UPDATE _app SET version=#{value} WHERE id=#{id}
+    </update>
+    <update id="updateOsById">
+        UPDATE _app SET os=#{value} WHERE id=#{id}
+    </update>
+    <update id="updateCompanyById">
+        UPDATE _app SET company=#{value} WHERE id=#{id}
+    </update>
+    <update id="updateDescriptionById">
+        UPDATE _app SET description=#{value} WHERE id=#{id}
+    </update>
+    <update id="updateTypeIdById">
+        UPDATE _app SET typeId=#{value} WHERE id=#{id}
+    </update>
+    <update id="updateStateById">
+        UPDATE _app SET state=#{value} WHERE id=#{id}
+    </update>
+    <update id="updateRatingCountAndAvgScoreById">
+        UPDATE _app SET avgScore=#{avgScore},ratingCount=#{ratingCount} WHERE id=#{id}
+    </update>
+    <update id="updateDownloadCountById">
+        UPDATE _app SET downloadCount=#{downloadCount} WHERE id=#{id}
+    </update>
+</mapper>
+
+

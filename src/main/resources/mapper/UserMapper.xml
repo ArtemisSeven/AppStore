@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.appstore.dao.UserDao">
+    <resultMap id="User" type="com.appstore.entity.User" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="phone" property="phone" jdbcType="BIGINT" />
+        <result column="password" property="password" jdbcType="VARCHAR" />
+        <result column="role" property="role" jdbcType="VARCHAR" />
+    </resultMap>
+    <select id="checkPhone" resultType="User" parameterType="long">
+      SELECT *
+      FROM _user
+      WHERE phone=#{phone}
+    </select>
+    <select id="getUserByAccount" resultType="User">
+    SELECT *
+    FROM _user
+    WHERE phone=#{phone} AND password=#{psw}
+    </select>
+    <select id="getUserById" resultType="User">
+        SELECT *
+        FROM _user
+        WHERE id=#{id}
+    </select>
+    <insert id="saveAccount">
+        INSERT ignore INTO _user (phone,password,role)
+        VALUES (#{phone},#{psw},"用户")
+    </insert>
+</mapper>

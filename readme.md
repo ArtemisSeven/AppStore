@@ -1,0 +1,2 @@
+基于Spring+SpringMVC+MyBatis框架
+使用Maven进行项目管理
