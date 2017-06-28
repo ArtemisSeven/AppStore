@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/head.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/common/tag.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/foot.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/module.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/navigator.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/account.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/manager.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/js/myInfo.js" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

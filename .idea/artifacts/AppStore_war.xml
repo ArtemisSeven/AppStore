@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="AppStore:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="appstore.war">
+      <element id="artifact" artifact-name="AppStore:war exploded" />
+    </root>
+  </artifact>
+</component>
