@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86270cce-31cd-4689-9ba1-1b4b8664adee" name="Default" comment="" />
+    <list default="true" id="86270cce-31cd-4689-9ba1-1b4b8664adee" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/dto/Page.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/dto/Page.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/dto/Result.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/dto/Result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/dto/ValidateAccountResult.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/dto/ValidateAccountResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/entity/App.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/entity/App.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/enums/AppState.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/enums/AppState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/enums/PageTab.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/enums/PageTab.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/interceptor/ManagerPrivilege.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/interceptor/ManagerPrivilege.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/interceptor/UserPrivilege.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/interceptor/UserPrivilege.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/service/serviceImpl/AppServiceImpl.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/service/serviceImpl/AppServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/service/serviceImpl/CarouselServiceImpl.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/service/serviceImpl/CarouselServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/service/serviceImpl/CommentServiceImpl.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/service/serviceImpl/CommentServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/service/serviceImpl/PictureServiceImpl.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/service/serviceImpl/PictureServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/service/serviceImpl/TypeServiceImpl.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/service/serviceImpl/TypeServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/service/serviceImpl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/service/serviceImpl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/web/ClientController.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/web/ClientController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/web/ManagerController.class" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/classes/com/appstore/web/ManagerController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/dto/Page.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/dto/Page.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/dto/Result.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/dto/Result.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/dto/ValidateAccountResult.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/dto/ValidateAccountResult.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/entity/App.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/entity/App.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/enums/AppState.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/enums/AppState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/enums/PageTab.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/enums/PageTab.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/interceptor/ManagerPrivilege.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/interceptor/ManagerPrivilege.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/interceptor/UserPrivilege.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/interceptor/UserPrivilege.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/service/serviceImpl/AppServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/service/serviceImpl/AppServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/service/serviceImpl/CarouselServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/service/serviceImpl/CarouselServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/service/serviceImpl/CommentServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/service/serviceImpl/CommentServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/service/serviceImpl/PictureServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/service/serviceImpl/PictureServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/service/serviceImpl/TypeServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/service/serviceImpl/TypeServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/service/serviceImpl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/service/serviceImpl/UserServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/web/ClientController.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/web/ClientController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/appstore/web/ManagerController.class" afterPath="$PROJECT_DIR$/target/classes/com/appstore/web/ManagerController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manager.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manager.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/manager.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/WEB-INF/jsp/manager.jsp" afterPath="$PROJECT_DIR$/target/appstore/WEB-INF/jsp/manager.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/appstore/js/manager.js" afterPath="$PROJECT_DIR$/target/appstore/js/manager.js" />
+    </list>
     <ignored path="AppStore.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,41 +69,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mybatis-config.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+      <file leaf-file-name="manager.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manager.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.48380566">
+              <caret line="806" column="43" selection-start-line="806" selection-start-column="43" selection-end-line="806" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManagerController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/appstore/web/ManagerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54862845">
-              <caret line="385" column="46" selection-start-line="385" selection-start-column="46" selection-end-line="385" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-service.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
+      <file leaf-file-name="manager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/manager.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spring-web.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-web.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+              <caret line="460" column="42" selection-start-line="460" selection-start-column="42" selection-end-line="460" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -122,8 +140,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/appstore/dao/TypeDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/TypeMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/appDetail.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/manager.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manager.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/appstore/dto/Page.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/appstore/dto/Result.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/appstore/dto/ValidateAccountResult.java" />
@@ -146,6 +162,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/appstore/service/serviceImpl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/appstore/web/ClientController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/appstore/web/ManagerController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/manager.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manager.jsp" />
       </list>
     </option>
   </component>
@@ -267,9 +285,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -334,7 +352,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,6 +426,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jsp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -427,6 +475,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -641,6 +719,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppStore" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appstore" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1314,41 +1418,42 @@
       <workItem from="1497681663518" duration="27000" />
       <workItem from="1498446245183" duration="3536000" />
       <workItem from="1498625717165" duration="428000" />
+      <workItem from="1509428773835" duration="3733000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="490568000" />
+    <option name="totallyTimeSpent" value="494301000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31084338" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1788269" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30963856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20171674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20171674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31084338" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30963856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1368,24 +1473,24 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/target/appstore/js/manager.js</url>
-          <line>179</line>
+          <line>178</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/target/appstore/WEB-INF/jsp/manager.jsp</url>
-          <line>564</line>
+          <line>558</line>
           <properties />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/target/appstore/WEB-INF/jsp/manager.jsp</url>
-          <line>180</line>
+          <line>174</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/target/appstore/WEB-INF/jsp/manager.jsp</url>
-          <line>74</line>
+          <line>68</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
@@ -1399,13 +1504,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/account.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="45" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/myInfo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13761468">
@@ -1438,20 +1536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="436" column="31" selection-start-line="436" selection-start-column="31" selection-end-line="436" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manager.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-158.75">
-          <caret line="254" column="31" selection-start-line="254" selection-start-column="31" selection-end-line="254" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1796,8 +1880,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/appstore/web/ManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54862845">
-          <caret line="385" column="46" selection-start-line="385" selection-start-column="46" selection-end-line="385" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="372" column="78" selection-start-line="372" selection-start-column="78" selection-end-line="372" selection-end-column="78" />
           <folding />
         </state>
       </provider>
@@ -1805,7 +1889,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/spring-service.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1814,6 +1898,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CarouselMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.9166667">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1509428706000" expanded="true" signature="599:676" placeholder="SELECT * FRO... _" />
+            <marker date="1509428706000" expanded="true" signature="747:795" placeholder="SELECT * FRO... _" />
+            <marker date="1509428706000" expanded="true" signature="1066:1102" placeholder="DELETE FROM " />
+            <marker date="1509428706000" expanded="true" signature="1147:1189" placeholder="DELETE FROM " />
+            <marker date="1509428706000" expanded="true" signature="1229:1310" placeholder="UPDATE _caro... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="460" column="42" selection-start-line="460" selection-start-column="42" selection-end-line="460" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/manager.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48380566">
+          <caret line="806" column="43" selection-start-line="806" selection-start-column="43" selection-end-line="806" selection-end-column="43" />
           <folding />
         </state>
       </provider>

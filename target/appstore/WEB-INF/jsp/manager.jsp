@@ -26,12 +26,12 @@
 <div class="container">
     <!-- 选项卡组件（菜单项nav-pills）-->
     <ul id="nav-tabs" class="nav nav-tabs" role="tablist">
-        <li onclick="firstAppPage()"><a id="appTab" href="#app" role="tab" data-toggle="pill">App管理模块&nbsp;&nbsp;<span
-                class="glyphicon glyphicon-th-large"></span></a></li>
-        <li onclick="firstCarouselPage()"><a id="carouselTab" href="#carousel" role="tab" data-toggle="pill">Carousel管理模块&nbsp;&nbsp;<span
-                class="glyphicon glyphicon-sound-stereo"></span></a></li>
-        <li onclick="firstTypePage()"><a id="typeTab" href="#type" role="tab" data-toggle="pill">类别管理模块&nbsp;&nbsp;<span
-                class="glyphicon glyphicon-tags"></span></a></li>
+            <li id="appLi"><a id="appTab" href="#app" role="tab" data-toggle="pill">App管理模块&nbsp;&nbsp;<span
+                    class="glyphicon glyphicon-th-large"></span></a></li>
+            <li id="carouselLi"><a id="carouselTab" href="#carousel" role="tab" data-toggle="pill">Carousel管理模块&nbsp;&nbsp;<span
+                    class="glyphicon glyphicon-sound-stereo"></span></a></li>
+            <li id="typeLi"><a id="typeTab" href="#type" role="tab" data-toggle="pill">类别管理模块&nbsp;&nbsp;<span
+                    class="glyphicon glyphicon-tags"></span></a></li>
     </ul>
     <!-- 选项卡面板 -->
     <% Page resultPage = (Page) request.getAttribute("resultPage");
@@ -740,15 +740,26 @@
 </html>
 <script src="/js/manager.js" type="text/javascript"></script>
 <script>
-    function firstAppPage() {
-        $('#getAppPage1').click();
-    }
-    function firstCarouselPage() {
-        $('#getCarouselPage1').click();
-    }
-    function firstTypePage() {
-        $('#getTypePage1').click();
-    }
+    $(function () {
+        manager.tab.bindLi();
+        if (${resultPage.pageTab eq "TYPE"}) {
+            manager.type.initTypePage({
+                dataListSize:${fn:length(resultPage.dataList)}, keyword: "${resultPage.keyword}"
+            });
+        }
+        else {
+            if (${resultPage.pageTab eq "APP"}) {
+                manager.app.initAppPage({
+                    appState: "${resultPage.appState}", keyword: "${resultPage.keyword}"
+                });
+            }
+            else {
+                manager.carousel.initCarouselPage();
+            }
+        }
+    });
+</script>
+<script>
     function checkTypeNull(size,currentPage,typeId) {
         if (size == 0) {
 //            alert('准备删除');
@@ -858,21 +869,5 @@
             reader.readAsDataURL(file.files[0]);
         }
     }
-    $(function () {
-        if (${resultPage.pageTab eq "TYPE"}) {
-            manager.type.initTypePage({
-                dataListSize:${fn:length(resultPage.dataList)}, keyword: "${resultPage.keyword}"
-            });
-        }
-        else {
-            if (${resultPage.pageTab eq "APP"}) {
-                manager.app.initAppPage({
-                    appState: "${resultPage.appState}", keyword: "${resultPage.keyword}"
-                });
-            }
-            else {
-                manager.carousel.initCarouselPage();
-            }
-        }
-    });
+
 </script>

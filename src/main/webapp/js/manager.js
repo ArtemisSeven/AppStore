@@ -449,6 +449,19 @@ var manager = {
             //manager.carousel.bindShowAddCarousel();
             manager.carousel.makePage();
         }
+    },
+    tab:{
+        bindLi:function(){
+            $('#appLi').click(function(){
+                $('#getAppPage1').click();
+            });
+            $('#carouselLi').click(function(){
+                $('#getCarouselPage1').click();
+            });
+            $('#typeLi').click(function(){
+                $('#getTypePage1').click();
+            });
+        }
     }
 
 };

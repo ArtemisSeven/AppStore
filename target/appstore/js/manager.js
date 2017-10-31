@@ -59,7 +59,6 @@ var manager = {
                 });
                 var oldTypeNameNode = $(this).parent().prev();
                 $('#changeTypeName').val(oldTypeNameNode.text());
-
                 $('#changeTypeBtn').click(function () {
                     var newTypeName = $('#changeTypeName').val();
                     if (!newTypeName) {
@@ -103,9 +102,9 @@ var manager = {
             deleteApp: function (appId) {
                 return '/managerCenter/app/delete?appId=' + appId;
             },
-            saveCachePic: function () {
-                return '/managerCenter/saveCachePic';
-            }
+            //saveCachePic: function () {
+            //    return '/managerCenter/saveCachePic';
+            //}
         },
         showUploadModal: function (allTypeSize) {
             if (allTypeSize<=0){
@@ -449,6 +448,19 @@ var manager = {
         initCarouselPage: function () {
             //manager.carousel.bindShowAddCarousel();
             manager.carousel.makePage();
+        }
+    },
+    tab:{
+        bindLi:function(){
+            $('#appLi').click(function(){
+                $('#getAppPage1').click();
+            });
+            $('#carouselLi').click(function(){
+                $('#getCarouselPage1').click();
+            });
+            $('#typeLi').click(function(){
+                $('#getTypePage1').click();
+            });
         }
     }
 
