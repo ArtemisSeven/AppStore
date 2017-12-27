@@ -1,6 +1,3 @@
-/**
- * Created by chenyuexiao on 16/11/13.
- */
 var manager = {
     type: {
         URL: {

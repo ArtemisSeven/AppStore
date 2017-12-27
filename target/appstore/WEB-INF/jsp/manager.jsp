@@ -5,13 +5,7 @@
 <%@ page import="com.appstore.entity.App" %>
 <%@ page import="com.appstore.entity.Picture" %>
 <%@ page import="com.appstore.dto.Page" %>
-<%@ page import="com.appstore.entity.Carousel" %><%--
-  Created by IntelliJ IDEA.
-  User: chenyuexiao
-  Date: 16/11/14
-  Time: 上午1:45
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.appstore.entity.Carousel" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../common/tag.jsp" %>
 <html>

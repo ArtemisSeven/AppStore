@@ -5,7 +5,6 @@
 <%@ page import="com.appstore.entity.Type" %>
 <%@ page import="com.appstore.entity.Carousel" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!--3-->
 <%
     Page indexPage=(Page)request.getAttribute("resultPage");
     List<Type> typeList=indexPage.getTypeList();

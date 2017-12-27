@@ -19,14 +19,14 @@
         <property name="user" value="${jdbc.user}"/>
         <property name="password" value="${jdbc.password}"/>
         <!--配置连接池私有属性-->
-        <property name="maxPoolSize" value="30"/>
-        <property name="minPoolSize" value="3"/>
+        <property name="maxPoolSize" value="400"/>
+        <property name="minPoolSize" value="50"/>
         <!--关闭后不自动commit-->
         <property name="autoCommitOnClose" value="false"/>
         <!--获取连接超时时间-->
-        <property name="checkoutTimeout" value="1000"/>
+        <property name="checkoutTimeout" value="10000000"/>
         <!--当前获取连接失败重试次数-->
-        <property name="acquireRetryAttempts" value="2"/>
+        <property name="acquireRetryAttempts" value="10"/>
     </bean>
 
     <!--配置sqlSessionFactory-->

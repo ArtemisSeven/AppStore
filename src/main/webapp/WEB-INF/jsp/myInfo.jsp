@@ -1,13 +1,8 @@
 <%@ page import="com.appstore.dto.Page" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.appstore.entity.Comment" %>
-<%@ page import="com.appstore.entity.User" %><%--
-  Created by IntelliJ IDEA.
-  User: chenyuexiao
-  Date: 16/11/14
-  Time: 上午1:46
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.appstore.entity.User" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="../common/tag.jsp" %>
