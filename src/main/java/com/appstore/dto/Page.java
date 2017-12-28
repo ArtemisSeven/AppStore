@@ -95,7 +95,7 @@ public class Page {
         this.appNames=appNames;
     }
     //TYPE
-    public Page(Enum<PageTab> pageTab,String keyword, int totalPages, int currentPage, List dataList,List typeAppSize) {
+    public Page(Enum<PageTab> pageTab,String keyword, int totalPages, int currentPage, List dataList,List<Integer> typeAppSize) {
         this.pageTab = pageTab;
         this.keyword = keyword;
         this.totalPages = totalPages;
