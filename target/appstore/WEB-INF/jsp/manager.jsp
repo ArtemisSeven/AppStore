@@ -739,17 +739,17 @@
         manager.tab.bindLi();
         if (${resultPage.pageTab eq "TYPE"}) {
             manager.type.initTypePage({
-                dataListSize:${fn:length(resultPage.dataList)}, keyword: "${resultPage.keyword}",ctx:"${ctx}"
+                dataListSize:${fn:length(resultPage.dataList)}, keyword: "${resultPage.keyword}",ctx:"<%=request.getContextPath()%>"
             });
         }
         else {
             if (${resultPage.pageTab eq "APP"}) {
                 manager.app.initAppPage({
-                    appState: "${resultPage.appState}", keyword: "${resultPage.keyword}",ctx:"${ctx}"
+                    appState: "${resultPage.appState}", keyword: "${resultPage.keyword}",ctx:"<%=request.getContextPath()%>"
                 });
             }
             else {
-                manager.carousel.initCarouselPage({ctx:"${ctx}"});
+                manager.carousel.initCarouselPage({ctx:"<%=request.getContextPath()%>"});
             }
         }
     });
