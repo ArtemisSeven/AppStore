@@ -66,7 +66,7 @@ var account = {
                             //window.location.reload();
                             //用reload好像会死循环原地爆炸
                             // var href = "http://localhost:8080";
-                            var href = "http://localhost:8080/appstore";
+                            var href = "http://45.77.250.181:8080/appstore";
                             window.location.replace(href);
 
 
@@ -80,7 +80,7 @@ var account = {
     logout: function (ctx) {
         $.get(ctx+account.URL.logout(), {}, function () {
             // var href = "http://localhost:8080";
-            var href = "http://localhost:8080/appstore";
+            var href = "http://45.77.250.181:8080/appstore";
             window.location.replace(href);
         });
     },
@@ -111,7 +111,7 @@ var account = {
                                 $.cookie('loginPsw', '', {expires: -1});
 
                                 // var href = "http://localhost:8080";
-                                var href = "http://localhost:8080/appstore";
+                                var href = "http://45.77.250.181:8080/appstore";
                                 window.location.replace(href);
 
                             }
