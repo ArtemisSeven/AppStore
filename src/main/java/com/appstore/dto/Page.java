@@ -38,7 +38,7 @@ public class Page {
     private String typeName;//appDetail
     private Picture logo;//appDetail
     private List<Comment> commentList;
-    private List<Long> userPhoneList;
+    private List<String> userPhoneList;
 
     public Page() {}
 
@@ -79,7 +79,7 @@ public class Page {
     }
 
     //appDetail
-    public Page(App app, String typeName, Picture logo, List<Picture> displaysList, List<Comment> commentList,List<Long> userPhoneList){
+    public Page(App app, String typeName, Picture logo, List<Picture> displaysList, List<Comment> commentList,List<String> userPhoneList){
         this.app=app;
         this.typeName=typeName;
         this.logo=logo;
@@ -135,11 +135,11 @@ public class Page {
         this.typeAppSize = typeAppSize;
     }
 
-    public List<Long> getUserPhoneList() {
+    public List<String> getUserPhoneList() {
         return userPhoneList;
     }
 
-    public void setUserPhoneList(List<Long> userPhoneList) {
+    public void setUserPhoneList(List<String> userPhoneList) {
         this.userPhoneList = userPhoneList;
     }
 

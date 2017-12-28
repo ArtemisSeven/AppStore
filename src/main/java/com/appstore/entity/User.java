@@ -5,7 +5,7 @@ public class User {
 
     private String role;
 
-    private Long phone;
+    private String phone;
 
     private String password;
 
@@ -25,11 +25,11 @@ public class User {
         this.role = role == null ? null : role.trim();
     }
 
-    public Long getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(Long phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

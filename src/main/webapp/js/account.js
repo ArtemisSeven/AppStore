@@ -34,7 +34,7 @@ var account = {
             keyboard: false
         });
     },
-    login: function () {
+    login: function (ctx) {
         var loginPhone = $('#loginPhone').val();
         var loginPsw = $('#loginPsw').val();
         var rememberMe = $('#rememberMe').is(':checked');//?
@@ -47,8 +47,7 @@ var account = {
             if (!loginPsw) {
                 $('#loginMessage').hide().html('请输入密码').show(200);
             } else {
-                $.post(account.URL.inOrRgsAccount(loginPhone, "login"), {psw: loginPsw}, function (loginResult) {
-                    //不明白这里alert(xxx)会alert两次
+                $.post(ctx+account.URL.inOrRgsAccount(loginPhone, "login"), {psw: loginPsw}, function (loginResult) {
                     if (!loginResult['phoneState']) {
                         $('#loginMessage').hide().html('此手机号码尚未注册').show(200);
                     }
@@ -66,7 +65,8 @@ var account = {
 
                             //window.location.reload();
                             //用reload好像会死循环原地爆炸
-                            var href = "http://localhost:8080";//应该在哪登录返回哪个页面的
+                            // var href = "http://localhost:8080";
+                            var href = "http://localhost:8080/appstore";
                             window.location.replace(href);
 
 
@@ -77,13 +77,14 @@ var account = {
         }
 
     },
-    logout: function () {
-        $.get(account.URL.logout(), {}, function () {
-            var href = "http://localhost:8080";
+    logout: function (ctx) {
+        $.get(ctx+account.URL.logout(), {}, function () {
+            // var href = "http://localhost:8080";
+            var href = "http://localhost:8080/appstore";
             window.location.replace(href);
         });
     },
-    register: function () {
+    register: function (ctx) {
         var registerPhone = $('#registerPhone').val();
         var registerPsw1 = $('#registerPsw1').val();
         var registerPsw2 = $('#registerPsw2').val();
@@ -100,7 +101,7 @@ var account = {
                     if (registerPsw1 != registerPsw2) {
                         $('#registerMessage').hide().html('两次输入的密码不一样').show(200);
                     } else {
-                        $.post(account.URL.inOrRgsAccount(registerPhone, "register"), {psw: registerPsw1}, function (registerResult) {
+                        $.post(ctx+account.URL.inOrRgsAccount(registerPhone, "register"), {psw: registerPsw1}, function (registerResult) {
                             if (registerResult['phoneState']) {
                                 $('#registerMessage').hide().html('此手机号码已被注册').show(200);
                             }
@@ -109,8 +110,8 @@ var account = {
                                 $.cookie('loginPhone', '', {expires: -1});
                                 $.cookie('loginPsw', '', {expires: -1});
 
-                                //window.location.reload();
-                                var href = "http://localhost:8080";
+                                // var href = "http://localhost:8080";
+                                var href = "http://localhost:8080/appstore";
                                 window.location.replace(href);
 
                             }

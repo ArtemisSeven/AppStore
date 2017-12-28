@@ -43,7 +43,7 @@
                             <h4 class="modal-title">修改密码</h4>
                         </div>
                         <div class="modal-body">
-                            <form id="modifyPswForm" method="post" action="/clientCenter/account/modifyPsw/<%=user.getId()%>">
+                            <form id="modifyPswForm" method="post" action="<%=request.getContextPath()%>/clientCenter/account/modifyPsw/<%=user.getId()%>">
                             <div class="form-group">
                                 <label>原密码</label><span id="oldPswTips" class="text-danger"></span>
                                 <input type="text" class="form-control" id="oldPsw" name="oldPsw">
@@ -94,7 +94,7 @@
     </table>
 </div>
 <!--3-->
-<script src="/js/myInfo.js" type="text/javascript"></script>
+<script src="<%=request.getContextPath()%>/js/myInfo.js" type="text/javascript"></script>
 <script>
     function checkModify(psw){
         var oldPsw=$('#oldPsw').val();

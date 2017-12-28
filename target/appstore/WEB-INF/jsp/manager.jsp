@@ -29,6 +29,7 @@
     </ul>
     <!-- 选项卡面板 -->
     <% Page resultPage = (Page) request.getAttribute("resultPage");
+        String ctx=request.getContextPath();
         String pageTab = resultPage.getPageTab().toString();
         System.out.println("pageTab" + pageTab);
         int totalPages = resultPage.getTotalPages();
@@ -49,7 +50,7 @@
                     int allTypeSize=resultPage.getAllType().size();
                     System.out.println("APP COME IN:" + appList.size());
                 %>
-                <form class="form-inline  col-md-10" role="search" method="get" action="/managerCenter/1/appPage">
+                <form class="form-inline  col-md-10" role="search" method="get" action="<%=request.getContextPath()%>/managerCenter/1/appPage">
                     <div class="form-group">
                         <span class="glyphicon glyphicon-search"></span>
                         <%--传递page.stateSelected给jq控制选中--%>
@@ -94,7 +95,7 @@
                         <div class="thumbnail">
                             <%if (logo != null) {%><img style="width:100px;height: 100px;"
                                                         src="<%=logo.getPicPath()+logo.getPicName()%>"
-                                                        alt="logoPic"><%} else {%><img src="/upload/b.png" alt="logoPic"
+                                                        alt="logoPic"><%} else {%><img src="<%=request.getContextPath()%>/upload/b.png" alt="logoPic"
                                                                                        style="width:100px;height: 100px;"><%}%>
                             <div class="caption">
                                 <h4>名称:<%=app.getAppName()%></h4>
@@ -102,22 +103,22 @@
                                     <strong>展示图片:</strong><br/>
                                     <%if (display1 != null) {%><img
                                         src="<%=display1.getPicPath()+display1.getPicName()%>" alt="displayPic"
-                                        style="width:120px;height: 200px;"><%} else {%><img src="/upload/b.png"
+                                        style="width:120px;height: 200px;"><%} else {%><img src="<%=request.getContextPath()%>/upload/b.png"
                                                                                             alt="displayPic"
                                                                                             style="width:120px;height: 200px;"><%}%>
                                     <%if (display2 != null) {%><img
                                         src="<%=display2.getPicPath()+display2.getPicName()%>" alt="displayPic"
-                                        style="width:120px;height: 200px;"><%} else {%><img src="/upload/b.png"
+                                        style="width:120px;height: 200px;"><%} else {%><img src="<%=request.getContextPath()%>/upload/b.png"
                                                                                             alt="displayPic"
                                                                                             style="width:120px;height: 200px;"><%}%>
                                     <%if (display3 != null) {%><img
                                         src="<%=display3.getPicPath()+display3.getPicName()%>" alt="displayPic"
-                                        style="width:120px;height: 200px;"><%} else {%><img src="/upload/b.png"
+                                        style="width:120px;height: 200px;"><%} else {%><img src="<%=request.getContextPath()%>/upload/b.png"
                                                                                             alt="displayPic"
                                                                                             style="width:120px;height: 200px;"><%}%>
                                     <%if (display4 != null) {%><img
                                         src="<%=display4.getPicPath()+display4.getPicName()%>" alt="displayPic"
-                                        style="width:120px;height: 200px;"><%} else {%><img src="/upload/b.png"
+                                        style="width:120px;height: 200px;"><%} else {%><img src="<%=request.getContextPath()%>/upload/b.png"
                                                                                             alt="displayPic"
                                                                                             style="width:120px;height: 200px;"><%}%>
                                 </p>
@@ -177,11 +178,11 @@
                                     <button onclick="showUpdateAppModal(<%=app.getId()%>,'<%=_appFileName%>','<%=_logo%>','<%=_d1%>','<%=_d2%>','<%=_d3%>','<%=_d4%>','<%=app.getAppName()%>','<%=_version%>','<%=_os%>',<%=app.getTypeId()%>,'<%=_company%>','<%=_description%>')"
                                             class="btn btn-info" role="button">更新
                                     </button>
-                                    <button onclick="deleteApp(<%=app.getId()%>)" class="btn btn-info" role="button">
+                                    <button onclick="deleteApp(<%=app.getId()%>,'<%=request.getContextPath()%>')" class="btn btn-info" role="button">
                                         删除
                                     </button>
                                     <%if (app.getState().equals("ON")) {%><a
-                                        href="/clientCenter/app/detail/<%=app.getId()%>" class="btn btn-info"
+                                        href="<%=request.getContextPath()%>/clientCenter/app/detail/<%=app.getId()%>" class="btn btn-info"
                                         role="button">查看详情</a><%}%>
                                 </p>
                             </div>
@@ -199,7 +200,7 @@
                             count = 0;
                             if (currentPage > 1) {%>
                         <li>
-                            <a href="<%="/managerCenter/"+(currentPage-1)+"/appPage?keyword="+keyword+"&appState="+appState%>">上一页</a>
+                            <a href="<%=request.getContextPath()%><%="/managerCenter/"+(currentPage-1)+"/appPage?keyword="+keyword+"&appState="+appState%>">上一页</a>
                         </li>
                         <%
                             }
@@ -207,11 +208,11 @@
                                 if (j >= 1) {
                                     if (j == currentPage) {
                         %>
-                        <li><a href="<%="/managerCenter/"+j+"/appPage?keyword="+keyword+"&appState="+appState%>"
+                        <li><a href="<%=request.getContextPath()%><%="/managerCenter/"+j+"/appPage?keyword="+keyword+"&appState="+appState%>"
                                style="color: #f92050"><%=j%>
                         </a></li>
                         <%} else {%>
-                        <li><a href="<%="/managerCenter/"+j+"/appPage?keyword="+keyword+"&appState="+appState%>"><%=j%>
+                        <li><a href="<%=request.getContextPath()%><%="/managerCenter/"+j+"/appPage?keyword="+keyword+"&appState="+appState%>"><%=j%>
                         </a></li>
                         <%
                                     }
@@ -221,7 +222,7 @@
                             if (currentPage < totalPages) {
                         %>
                         <li>
-                            <a href="<%="/managerCenter/"+(currentPage+1)+"/appPage?keyword="+keyword+"&appState="+appState%>">下一页</a>
+                            <a href="<%=request.getContextPath()%><%="/managerCenter/"+(currentPage+1)+"/appPage?keyword="+keyword+"&appState="+appState%>">下一页</a>
                         </li>
                         <%}%>
                     </ul>
@@ -267,7 +268,7 @@
                                         <button onclick="showUpdateCarouselModal(<%=carousel.getId()%>)"
                                                 class="btn  btn-primary" role="button">更换图片
                                         </button>
-                                        <button onclick="deleteCarousel(<%=carousel.getId()%>)" class="btn btn-default"
+                                        <button onclick="deleteCarousel(<%=carousel.getId()%>,'<%=request.getContextPath()%>')" class="btn btn-default"
                                                 role="button">删除
                                         </button>
                                     </p>
@@ -285,7 +286,7 @@
                             count = 0;
                             if (currentPage > 1) {%>
                         <li>
-                            <a href="<%="/managerCenter/"+(currentPage-1)+"/carouselPage"%>">上一页</a>
+                            <a href="<%=request.getContextPath()%><%="/managerCenter/"+(currentPage-1)+"/carouselPage"%>">上一页</a>
                         </li>
                         <%
                             }
@@ -293,11 +294,11 @@
                                 if (j >= 1) {
                                     if (j == currentPage) {
                         %>
-                        <li><a href="<%="/managerCenter/"+j+"/carouselPage"%>"
+                        <li><a href="<%=request.getContextPath()%><%="/managerCenter/"+j+"/carouselPage"%>"
                                style="color: #f92050"><%=j%>
                         </a></li>
                         <%} else {%>
-                        <li><a href="<%="/managerCenter/"+j+"/carouselPage"%>"><%=j%>
+                        <li><a href="<%=request.getContextPath()%><%="/managerCenter/"+j+"/carouselPage"%>"><%=j%>
                         </a></li>
                         <%
                                     }
@@ -307,7 +308,7 @@
                             if (currentPage < totalPages) {
                         %>
                         <li>
-                            <a href="<%="/managerCenter/"+(currentPage+1)+"/carouselPage"%>">下一页</a>
+                            <a href="<%=request.getContextPath()%><%="/managerCenter/"+(currentPage+1)+"/carouselPage"%>">下一页</a>
                         </li>
                         <%}%>
                     </ul>
@@ -320,7 +321,7 @@
         <div class="tab-pane fade" id="type">
             <%if (pageTab.equals("TYPE")) {%>
             <div class="row" style="margin-top: 20px;">
-                <form class="form-inline  col-md-10" role="search" action="/managerCenter/1/typePage" method="get">
+                <form class="form-inline  col-md-10" role="search" action="<%=request.getContextPath()%>/managerCenter/1/typePage" method="get">
                     <div class="form-group">
                         <span class="glyphicon glyphicon-search"></span>
                         <input id="typeKeyword" name="keyword" type="text" class="form-control" placeholder="Search">
@@ -354,7 +355,7 @@
                     <td><span class="changeTypeNameNode" style="color: #6c68af">更名</span></td>
                     <hide><a id="deleteTypeA" style="visibility: hidden;"><span id="deleteTypeLink">隐藏删除</span></a></hide>
                     <td><span
-                            onclick="checkTypeNull(<%=typeAppSize.get(j)%>,<%=currentPage%>,<%=type.getId()%>)">删除</span>
+                            onclick="checkTypeNull(<%=typeAppSize.get(j)%>,<%=currentPage%>,<%=type.getId()%>,'<%=request.getContextPath()%>')">删除</span>
                     </td>
                 </tr>
                 <%
@@ -368,18 +369,18 @@
                         <%
                             count = 0;
                             if (currentPage > 1) {%>
-                        <li><a href="<%="/managerCenter/"+(currentPage-1)+"/typePage?keyword="+keyword%>">上一页</a></li>
+                        <li><a href="<%=request.getContextPath()%><%="/managerCenter/"+(currentPage-1)+"/typePage?keyword="+keyword%>">上一页</a></li>
                         <%
                             }
                             for (int j = currentPage - 2; j <= totalPages && count < pageIndexSize; ++j) {
                                 if (j >= 1) {
                                     if (j == currentPage) {
                         %>
-                        <li><a href="<%="/managerCenter/"+j+"/typePage?keyword="+keyword%>"
+                        <li><a href="<%=request.getContextPath()%><%="/managerCenter/"+j+"/typePage?keyword="+keyword%>"
                                style="color: #f92050"><%=j%>
                         </a></li>
                         <%} else {%>
-                        <li><a href="<%="/managerCenter/"+j+"/typePage?keyword="+keyword%>"><%=j%>
+                        <li><a href="<%=request.getContextPath()%><%="/managerCenter/"+j+"/typePage?keyword="+keyword%>"><%=j%>
                         </a></li>
                         <%
                                     }
@@ -388,7 +389,7 @@
                             }
                             if (currentPage < totalPages) {
                         %>
-                        <li><a href="<%="/managerCenter/"+(currentPage+1)+"/typePage?keyword="+keyword%>">下一页</a></li>
+                        <li><a href="<%=request.getContextPath()%><%="/managerCenter/"+(currentPage+1)+"/typePage?keyword="+keyword%>">下一页</a></li>
                         <%}%>
                     </ul>
                 </div>
@@ -483,8 +484,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <span id="saveAppBtn0" onclick="uploadButSaveApp()" class="btn btn-primary">保存</span>
-                <span id="uploadAppBtn0" onclick="uploadApp()" class="btn btn-primary">上架</span>
+                <span id="saveAppBtn0" onclick="uploadButSaveApp('<%=request.getContextPath()%>')" class="btn btn-primary">保存</span>
+                <span id="uploadAppBtn0" onclick="uploadApp('<%=request.getContextPath()%>')" class="btn btn-primary">上架</span>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -573,8 +574,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <span id="saveAppBtn" onclick="updateButSaveApp()" class="btn btn-primary">保存</span>
-                <span id="uploadAppBtn" onclick="updateApp()" class="btn btn-primary">上传</span>
+                <span id="saveAppBtn" onclick="updateButSaveApp('<%=request.getContextPath()%>')" class="btn btn-primary">保存</span>
+                <span id="uploadAppBtn" onclick="updateApp('<%=request.getContextPath()%>')" class="btn btn-primary">上传</span>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -611,7 +612,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <span id="saveCarouselBtn" onclick="saveCarousel()" class="btn btn-primary">添加</span>
+                <span id="saveCarouselBtn" onclick="saveCarousel('<%=request.getContextPath()%>')" class="btn btn-primary">添加</span>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -701,7 +702,7 @@
             </div>
             <div class="modal-body">
                 <form id="updateCarouselForm" role="form" method="post" enctype="multipart/form-data"
-                      action="/managerCenter/carousel/update">
+                      action="<%=request.getContextPath()%>/managerCenter/carousel/update">
                     <div class="form-group">
                         <label for="newCarouselFile">carousel图片</label><span id="newCarouselFileMessage"
                                                                              class="text-danger"></span>
@@ -716,81 +717,80 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button id="updateCarouselBtn" onclick="updateCarousel()" type="button" class="btn btn-primary">确定
+                <button id="updateCarouselBtn" onclick="updateCarousel('<%=request.getContextPath()%>')" type="button" class="btn btn-primary">确定
                 </button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal 更换carousel图片弹窗-->
 <hide>
-    <a href="/managerCenter/1/appPage?appState=ALL&keyword=" style="visibility: hidden;"><span
+    <a href="<%=request.getContextPath()%>/managerCenter/1/appPage?appState=ALL&keyword=" style="visibility: hidden;"><span
             id="getAppPage1">app</span></a>
-    <a href="/managerCenter/1/carouselPage" style="visibility: hidden;"><span id="getCarouselPage1">car</span></a>
-    <a href="/managerCenter/1/typePage?keyword=" style="visibility: hidden;"><span id="getTypePage1">type</span></a>
+    <a href="<%=request.getContextPath()%>/managerCenter/1/carouselPage" style="visibility: hidden;"><span id="getCarouselPage1">car</span></a>
+    <a href="<%=request.getContextPath()%>/managerCenter/1/typePage?keyword=" style="visibility: hidden;"><span id="getTypePage1">type</span></a>
 </hide>
 
 
 </body>
 </html>
-<script src="/js/manager.js" type="text/javascript"></script>
+<script src="<%=request.getContextPath()%>/js/manager.js" type="text/javascript"></script>
 <script>
     $(function () {
         manager.tab.bindLi();
         if (${resultPage.pageTab eq "TYPE"}) {
             manager.type.initTypePage({
-                dataListSize:${fn:length(resultPage.dataList)}, keyword: "${resultPage.keyword}"
+                dataListSize:${fn:length(resultPage.dataList)}, keyword: "${resultPage.keyword}",ctx:"${ctx}"
             });
         }
         else {
             if (${resultPage.pageTab eq "APP"}) {
                 manager.app.initAppPage({
-                    appState: "${resultPage.appState}", keyword: "${resultPage.keyword}"
+                    appState: "${resultPage.appState}", keyword: "${resultPage.keyword}",ctx:"${ctx}"
                 });
             }
             else {
-                manager.carousel.initCarouselPage();
+                manager.carousel.initCarouselPage({ctx:"${ctx}"});
             }
         }
     });
 </script>
 <script>
-    function checkTypeNull(size,currentPage,typeId) {
+    function checkTypeNull(size,currentPage,typeId,ctx) {
         if (size == 0) {
 //            alert('准备删除');
-            var href = '/managerCenter/' + currentPage + '/' + typeId + '/delete?keyword=';
+            var href = ctx+'/managerCenter/' + currentPage + '/' + typeId + '/delete?keyword=';
             $('#deleteTypeA').attr('href',href);
             $('#deleteTypeLink').click();
         } else {
             alert('请先删除该类型下的所有app');
         }
     }
-    function uploadButSaveApp() {
-        manager.app.uploadButSaveApp();
+    function uploadButSaveApp(ctx) {
+        manager.app.uploadButSaveApp(ctx);
     }
-    function updateButSaveApp() {
-        manager.app.updateButSaveApp();
+    function updateButSaveApp(ctx) {
+        manager.app.updateButSaveApp(ctx);
     }
     function showUploadModal(allTypeSize){
         manager.app.showUploadModal(allTypeSize);
     }
-    function uploadApp() {
-        manager.app.uploadApp();
+    function uploadApp(ctx) {
+        manager.app.uploadApp(ctx);
     }
-    function updateApp(){
-        manager.app.updateApp();
+    function updateApp(ctx){
+        manager.app.updateApp(ctx);
     }
     function showUpdateAppModal(appId,appFileName,logo,d1,d2,d3,d4,appName,version,os,typeId,company,description) {
-//    function showUpdateAppModal() {
         manager.app.showUpdateAppModal(appId,appFileName,logo,d1,d2,d3,d4,appName,version,os,typeId,company,description);
     }
-    function deleteApp(appId) {
-        manager.app.deleteApp(appId);
+    function deleteApp(appId,ctx) {
+        manager.app.deleteApp(appId,ctx);
     }
-    function saveCarousel() {
-        manager.carousel.addCarousel();
+    function saveCarousel(ctx) {
+        manager.carousel.addCarousel(ctx);
     }
-    function deleteCarousel(carouselId) {
-        manager.carousel.deleteCarousel(carouselId);
+    function deleteCarousel(carouselId,ctx) {
+        manager.carousel.deleteCarousel(carouselId,ctx);
     }
     function showUpdateCarouselModal(carouselId) {
         manager.carousel.showUpdateCarouselModal(carouselId);

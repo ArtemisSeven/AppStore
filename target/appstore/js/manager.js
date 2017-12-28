@@ -17,13 +17,13 @@ var manager = {
                 });
             });
         },
-        bindAddType: function (dataListSize, keyword) {
+        bindAddType: function (dataListSize, keyword,ctx) {
             $('#addType').click(function () {
                 var newType = $('#newType').val();
                 if (!newType) {
                     $('#typeMessage').hide().html('请输入类型名称').show(200);
                 } else {
-                    $.post(manager.type.URL.saveType(newType), {}, function (result) {
+                    $.post(ctx+manager.type.URL.saveType(newType), {}, function (result) {
                         if (!result['state']) {
                             $('#typeMessage').hide().html('此类型已存在').show(200);
                         } else {
@@ -47,7 +47,7 @@ var manager = {
             $('#nav-tabs li:eq(' + num + ') a').tab('show');
             $('#typeKeyword').val(keyword);
         },
-        changeType: function () {
+        changeType: function (ctx) {
             $(".changeTypeNameNode").click(function () {
                 $('#changeTypeModal').modal({
                     show: true,
@@ -61,7 +61,7 @@ var manager = {
                     if (!newTypeName) {
                         $('#changeTypeMessage').hide().html('请输入类型名称').show(200);
                     } else {
-                        $.post(manager.type.URL.changeType(oldTypeNameNode.text(), newTypeName), {}, function (result) {
+                        $.post(ctx+manager.type.URL.changeType(oldTypeNameNode.text(), newTypeName), {}, function (result) {
                             if (!result['state']) {
                                 $('#changeTypeMessage').hide().html('此类型已存在').show(200);
                             } else {
@@ -76,9 +76,9 @@ var manager = {
         },
         initTypePage: function (param) {
             manager.type.bindShowAddType();
-            manager.type.bindAddType(param['dataListSize'], param['keyword']);
+            manager.type.bindAddType(param['dataListSize'], param['keyword'],param['ctx']);
             manager.type.makePage(param['keyword']);
-            manager.type.changeType();
+            manager.type.changeType(param['ctx']);
 
         }
     },
@@ -131,7 +131,7 @@ var manager = {
             $('#appState').val(appState);
             $('#appKeyword').val(keyword);
         },
-        uploadButSaveApp: function () {
+        uploadButSaveApp: function (ctx) {
             $('.appMessage0').each(function () {
                 $(this).html(' ');
             });
@@ -139,36 +139,25 @@ var manager = {
             if (!appName) {
                 $('#appNameMessage0').hide().html("app名称不能为空").show(200);
             } else {
-                $.post(manager.app.URL.checkAppName(appName), {}, function (result) {
+                $.post(ctx+manager.app.URL.checkAppName(appName), {}, function (result) {
                     if (!result['state']) {
                         $('#appNameMessage0').hide().html("app名称已存在").show(200);
                     } else {
-                        $('#appForm0').attr('action', manager.app.URL.saveApp()).submit();
+                        $('#appForm0').attr('action', ctx+manager.app.URL.saveApp()).submit();
                     }
                 });
             }
         },
-        updateButSaveApp: function () {
-            //$('.appMessage').each(function () {
-            //    $(this).html(' ');
-            //});
+        updateButSaveApp: function (ctx) {
             var appName = $('#appName').val();
             if (!appName) {
                 $('#appNameMessage').hide().html("app名称不能为空").show(200);
             } else {
-                //$.post(manager.app.URL.checkAppName(appName), {}, function (result) {
-                //    if (!result['state']) {
-                //        $('#appNameMessage').hide().html("app名称已存在").show(200);
-                //    } else {
-                        $('#appForm').attr('action', manager.app.URL.saveApp()).submit();
-                //    }
-                //});
+                $('#appForm').attr('action', ctx+manager.app.URL.saveApp()).submit();
             }
         },
-        uploadApp: function () {
-            //$('.appMessage').each(function () {
-            //    $(this).html(' ');
-            //});
+        uploadApp: function (ctx) {
+
             var appFile = $('#appFile0').val();
             var logoFile = $('#logoFile0').val();
             var displayFile1 = $('#displayFile10').val();
@@ -231,16 +220,16 @@ var manager = {
                 ok = 0
             }
             if (ok == 1) {
-                    $.post(manager.app.URL.checkAppName(appName), {}, function (result) {
+                    $.post(ctx+manager.app.URL.checkAppName(appName), {}, function (result) {
                         if (!result['state']) {
                             $('#appNameMessage0').hide().html("app名称已存在").show(200);
                         } else {
-                            $('#appForm0').attr('action', manager.app.URL.uploadApp()).submit();
+                            $('#appForm0').attr('action', ctx+manager.app.URL.uploadApp()).submit();
                         }
                     });
             }
         },
-        updateApp:function(){
+        updateApp:function(ctx){
             var appFile = $('#appFile').val();
             var logoFile = $('#logoFile').val();
             var displayFile1 = $('#displayFile1').val();
@@ -303,22 +292,14 @@ var manager = {
                 ok = 0
             }
             if (ok == 1) {
-                //$.post(manager.app.URL.checkAppName(appName), {}, function (result) {
-                    //if (!result['state']) {
-                    //    $('#appNameMessage').hide().html("app名称已存在").show(200);
-                    //} else {
-                        $('#appForm').attr('action', manager.app.URL.updateApp()).submit();
-                    //}
-                //});
+                $('#appForm').attr('action',ctx+manager.app.URL.updateApp()).submit();
             }
         },
         showUpdateAppModal: function (appId,appFileName,logo,d1,d2,d3,d4,appName,version,os,typeId,company,description) {
-        //showUpdateAppModal: function () {
             $('.appMessage').each(function () {
                 $(this).html(' ');
             });
             $('#oldAppId').val(appId);
-            //}
             if (appFileName != 'null') {
                 $('#appFileNameCache').html(appFileName);
             }
@@ -367,9 +348,9 @@ var manager = {
                 keyboard: false
             });
         },
-        deleteApp: function (appId) {
+        deleteApp: function (appId,ctx) {
             $('#tipsMessage').html('确定删除该App吗?');
-            $('#tipsEnterBtn').attr('href', manager.app.URL.deleteApp(appId));
+            $('#tipsEnterBtn').attr('href', ctx+manager.app.URL.deleteApp(appId));
             $('#tipsModal').modal({
                 show: true,
                 backdrop: 'static',
@@ -377,7 +358,6 @@ var manager = {
             });
         },
         initAppPage: function (param) {
-            //manager.app.bindShowUpload();
             manager.app.makePage(param['appState'], param['keyword']);
         }
     },
@@ -407,18 +387,18 @@ var manager = {
             $('#carouselTab').addClass("active").siblings().removeClass("active");
             $('#nav-tabs li:eq(' + num + ') a').tab('show');
         },
-        addCarousel: function () {
+        addCarousel: function (ctx) {
             $('#carouselFileMessage').html(' ');
             var carouselFile = $('#carouselFile').val();
             if (!carouselFile) {
                 $('#carouselFileMessage').hide().html("图片不能为空").show(200);
             } else {
-                $('#carouselForm').attr('action', manager.carousel.URL.saveCarousel()).submit();
+                $('#carouselForm').attr('action', ctx+manager.carousel.URL.saveCarousel()).submit();
             }
         },
-        deleteCarousel: function (carouselId) {
+        deleteCarousel: function (carouselId,ctx) {
             $('#tipsMessage').html('确定删除该Carousel吗?');
-            $('#tipsEnterBtn').attr('href', manager.carousel.URL.deleteCarousel(carouselId));
+            $('#tipsEnterBtn').attr('href', ctx+manager.carousel.URL.deleteCarousel(carouselId));
             $('#tipsModal').modal({
                 show: true,
                 backdrop: 'static',
@@ -443,7 +423,6 @@ var manager = {
             }
         },
         initCarouselPage: function () {
-            //manager.carousel.bindShowAddCarousel();
             manager.carousel.makePage();
         }
     },

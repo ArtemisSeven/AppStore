@@ -3,11 +3,12 @@ use AppStore;
 CREATE TABLE `_user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `role` varchar(20) DEFAULT '用户',
-  `phone` bigint(20) NOT NULL,
+  `phone` varchar(20) NOT NULL,
   `password` varchar(40) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `phone` (`phone`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+
 
 CREATE TABLE `_type` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -72,5 +73,6 @@ CREATE TABLE `_carousel` (
   CONSTRAINT `fk_carousel_appId` FOREIGN KEY (`appId`) REFERENCES `_app` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
-insert _user (phone,password,role) value (13232217305,123,'用户');
-insert _user (phone,password,role) value (12345678910,123,'管理员');
+insert _user (phone,password,role) value ('00000000009',123,'管理员');
+
+

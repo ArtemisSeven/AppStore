@@ -51,7 +51,7 @@ public class ClientController {
 
     @RequestMapping(value = "/account/{phone}/{inOrRgs}", method = RequestMethod.POST)
     @ResponseBody
-    private ValidateAccountResult validateAccount(@PathVariable("phone") Long phone, @PathVariable("inOrRgs") String inOrRgs, @RequestParam("psw") String psw, HttpSession session) {
+    private ValidateAccountResult validateAccount(@PathVariable("phone") String phone, @PathVariable("inOrRgs") String inOrRgs, @RequestParam("psw") String psw, HttpSession session) {
         boolean phoneState = userService.checkPhone(phone);
         if (inOrRgs.equals("login")) {
             if (!phoneState) {
@@ -214,7 +214,7 @@ public class ClientController {
         List<Picture> displaysList = pictureService.getDisplaysPicByAppId(appId);
         String typeName = typeService.getTypeById(app.getTypeId()).getTypeName();
         List<Comment> commentList=commentService.getAllCommentByAppId(appId);
-        List<Long> userPhoneList=new LinkedList<Long>();
+        List<String> userPhoneList=new LinkedList<String>();
         for (int i=0;i<commentList.size();++i){
             userPhoneList.add(userService.getUserById(commentList.get(i).getUserId()).getPhone());
         }

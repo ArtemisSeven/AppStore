@@ -26,16 +26,16 @@
         <div class="carousel-inner" role="listbox">
         <%if (carouselListSize>0){%>
             <div class="item active">
-                <a href="/clientCenter/app/detail/<%=carouselList.get(0).getAppId()%>"><img src="<%=carouselList.get(0).getPicPath()+carouselList.get(0).getPicName()%>" alt="0"></a>
+                <a href="<%=request.getContextPath()%>/clientCenter/app/detail/<%=carouselList.get(0).getAppId()%>"><img src="<%=carouselList.get(0).getPicPath()+carouselList.get(0).getPicName()%>" alt="0"></a>
             </div>
             <%for (int i=1;i<carouselListSize;++i){%>
             <div class="item">
-                <a href="/clientCenter/app/detail/<%=carouselList.get(i).getAppId()%>"><img src="<%=carouselList.get(i).getPicPath()+carouselList.get(i).getPicName()%>" alt="<%=i%>"></a>
+                <a href="<%=request.getContextPath()%>/clientCenter/app/detail/<%=carouselList.get(i).getAppId()%>"><img src="<%=carouselList.get(i).getPicPath()+carouselList.get(i).getPicName()%>" alt="<%=i%>"></a>
             </div>
             <%}%>
         <%}else{%>
         <div class="item active">
-           <img src="/upload/noCarousel.png" alt="0">
+           <img src="<%=request.getContextPath()%>/upload/noCarousel.png" alt="0">
         </div>
         <%}%>
         </div>
@@ -58,7 +58,7 @@
             <div class="row">
                 <%for (int i=0;i<typeList.size();++i){%>
                 <div class="col-sm-2" style="text-align: center">
-                    <a href="/clientCenter/app/type/1?typeId=<%=typeList.get(i).getId()%>" class="thumbnail" style="text-decoration: none">
+                    <a href="<%=request.getContextPath()%>/clientCenter/app/type/1?typeId=<%=typeList.get(i).getId()%>" class="thumbnail" style="text-decoration: none">
                         <%=typeList.get(i).getTypeName()%>
                     </a>
                 </div>
@@ -68,7 +68,7 @@
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><span>精选排行榜</span><span class="pull-right"><a href="/clientCenter/app/quantity/1" style="text-decoration: none">更多</a></span></h3>
+            <h3 class="panel-title"><span>精选排行榜</span><span class="pull-right"><a href="<%=request.getContextPath()%>/clientCenter/app/quantity/1" style="text-decoration: none">更多</a></span></h3>
         </div>
         <div class="panel-body">
             <div class="row">
@@ -76,7 +76,7 @@
                 Picture picture=quantityAppLogoList.get(i);%>
                 <div class="col-md-2" style="text-align: center">
                     <div class="thumbnail">
-                        <a href="/clientCenter/app/detail/<%=quantityAppList.get(i).getId()%>">
+                        <a href="<%=request.getContextPath()%>/clientCenter/app/detail/<%=quantityAppList.get(i).getId()%>">
                         <img src="<%=picture.getPicPath()+picture.getPicName()%>" alt="logoPic" style="width: 100px;height: 100px;">
                         <div class="caption">
                             <h3><%=quantityAppList.get(i).getAppName()%></h3>
@@ -90,14 +90,14 @@
     </div>
     <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><span>下载排行版</span><span class="pull-right"><a href="/clientCenter/app/quality/1" style="text-decoration: none">更多</a></span></h3>
+            <h3 class="panel-title"><span>下载排行版</span><span class="pull-right"><a href="<%=request.getContextPath()%>/clientCenter/app/quality/1" style="text-decoration: none">更多</a></span></h3>
         </div>
         <div class="panel-body">
             <div class="row">
                 <%for (int i=0;i<qualityAppList.size() && i<12;++i){%>
                 <div class="col-md-2" style="text-align: center">
                     <div class="thumbnail">
-                        <a href="/clientCenter/app/detail/<%=qualityAppList.get(i).getId()%>">
+                        <a href="<%=request.getContextPath()%>/clientCenter/app/detail/<%=qualityAppList.get(i).getId()%>">
                         <img src="<%=qualityLogoList.get(i).getPicPath()+qualityLogoList.get(i).getPicName()%>" alt="logoPic" style="width: 100px;height: 100px;">
                         <div class="caption">
                             <h3><%=qualityAppList.get(i).getAppName()%></h3>

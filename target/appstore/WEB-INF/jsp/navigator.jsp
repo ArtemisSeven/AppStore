@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/index.jsp">AppStore</a>
+            <a class="navbar-brand" href="<%=request.getContextPath()%>/index.jsp">AppStore</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -21,16 +21,16 @@
                     </c:when>
                     <c:otherwise>
                         <c:if test="${sessionScope.user.role == '用户'}">
-                            <li><a href="/clientCenter/account/myInfo">个人中心</a></li>
+                            <li><a href="<%=request.getContextPath()%>/clientCenter/account/myInfo">个人中心</a></li>
                         </c:if>
                         <c:if test="${sessionScope.user.role == '管理员'}">
-                            <li><a href="/managerCenter/1/appPage?appState=ALL&keyword=">管理中心</a></li>
+                            <li><a href="<%=request.getContextPath()%>/managerCenter/1/appPage?appState=ALL&keyword=">管理中心</a></li>
                         </c:if>
-                        <li><a id="logout" onclick="logout()" href="#">退出</a></li>
+                        <li><a id="logout" onclick="logout('<%=request.getContextPath()%>')" href="#">退出</a></li>
                     </c:otherwise>
                 </c:choose>
             </ul>
-                <form class="navbar-form navbar-right" role="search" action="/clientCenter/app/search/1" method="get">
+                <form class="navbar-form navbar-right" role="search" action="<%=request.getContextPath()%>/clientCenter/app/search/1" method="get">
                     <div class="form-group">
                         <input type="text" class="form-control" placeholder="app名称关键字" name="appNameKeyword">
                     </div>
@@ -72,7 +72,7 @@
                 <button id="findPswBtn" type="button" class="btn btn-default" data-dismiss="modal">
                     忘记密码
                 </button>
-                <button id="login" type="button" class="btn btn-primary" onclick="login()">登录</button>
+                <button id="login" type="button" class="btn btn-primary" onclick="login('<%=request.getContextPath()%>')">登录</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -105,7 +105,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button id="register" type="button" class="btn btn-primary" onclick="register()">注册</button>
+                <button id="register" type="button" class="btn btn-primary" onclick="register('<%=request.getContextPath()%>')">注册</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -113,19 +113,19 @@
 
 
 
-<script src="/js/account.js" type="text/javascript"></script>
+<script src="<%=request.getContextPath()%>/js/account.js" type="text/javascript"></script>
 <script>
     var rememberMeCookie = $.cookie('rememberMe');
     var phoneCookie = $.cookie('loginPhone');
     var pswCookie = $.cookie('loginPsw');
-    function login(){
-        account.login();
+    function login(ctx){
+        account.login(ctx);
     }
-    function register(){
-        account.register();
+    function register(ctx){
+        account.register(ctx);
     }
-    function logout(){
-        account.logout();
+    function logout(ctx){
+        account.logout(ctx);
     }
     function showLoginModal(){
         account.showLoginModal(rememberMeCookie, phoneCookie, pswCookie);

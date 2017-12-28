@@ -31,7 +31,7 @@
     List<Picture> displaysList=resultPage.getDisplaysList();
     String typeName=resultPage.getTypeName();
     List<Comment> commentList=resultPage.getCommentList();
-    List<Long> userPhoneList=resultPage.getUserPhoneList();
+    List<String> userPhoneList=resultPage.getUserPhoneList();
     int isCurrentUserCommented=0;
 %>
 <jsp:include page="/WEB-INF/jsp/navigator.jsp"/>
@@ -63,7 +63,7 @@
                             <span class="glyphicon glyphicon-star noChosen"></span>
                         <%}%>
                         (<%=app.getRatingCount()%>次评分)
-                        <a class="btn btn-primary btn-lg pull-right" href="/clientCenter/app/download/<%=app.getId()%>" role="button">立即下载</a>
+                        <a class="btn btn-primary btn-lg pull-right" href="<%=request.getContextPath()%>/clientCenter/app/download/<%=app.getId()%>" role="button">立即下载</a>
                     </p>
                 </div>
             </div>
@@ -152,7 +152,7 @@
             </div>
             <!--6.1-->
 
-            <form id="commentForm" role="form" class="bg-active" style="margin-top: 20px;" enctype="multipart/form-data" action="/clientCenter/app/comment/<%=app.getId()%>" method="post">
+            <form id="commentForm" role="form" class="bg-active" style="margin-top: 20px;" enctype="multipart/form-data" action="<%=request.getContextPath()%>/clientCenter/app/comment/<%=app.getId()%>" method="post">
                 <div class="form-group">
                     <strong>评分:</strong>
                     <p>

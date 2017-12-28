@@ -15,18 +15,18 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
 
-    public boolean checkPhone(Long phone) {
+    public boolean checkPhone(String phone) {
         if (userDao.checkPhone(phone)!=null) return true;
         else return false;
     }
 
-    public User getUserByAccount(Long phone, String psw) {
+    public User getUserByAccount(String phone, String psw) {
         User user=userDao.getUserByAccount(phone,psw);
         if (user!=null) return user;
         else return null;
     }
 
-    public User registerAccount(Long phone, String psw) {
+    public User registerAccount(String phone, String psw) {
         int result=userDao.saveAccount(phone,psw);
         if (result>0){
             return  userDao.getUserByAccount(phone,psw);

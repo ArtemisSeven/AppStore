@@ -68,7 +68,7 @@
                         <p><strong>版本:</strong><%=app.getVersion()%></p>
                         <p style="height:150px; overflow: hidden"><strong>应用描述:</strong><%=app.getDescription()%></p>
                         <p>....</p>
-                        <p><a href="/clientCenter/app/detail/<%=app.getId()%>" class="btn btn-primary" role="button">查看详情</a>
+                        <p><a href="<%=request.getContextPath()%>/clientCenter/app/detail/<%=app.getId()%>" class="btn btn-primary" role="button">查看详情</a>
                         </p>
                     </div>
                 </div>
@@ -85,15 +85,15 @@
                 <li>
 
                     <%if (pageTab.equals("SEARCH")){%>
-                        <a href="<%="/clientCenter/app/search/"+(currentPage-1)+"?appNameKeyword="+keyword%>">上一页</a>
+                        <a href="<%=request.getContextPath()%>/<%="/clientCenter/app/search/"+(currentPage-1)+"?appNameKeyword="+keyword%>">上一页</a>
                     <%}else{
                         if (pageTab.equals("QUALITY")){%>
-                            <a href="<%="/clientCenter/app/quality/"+(currentPage-1)%>">上一页</a><%
+                            <a href="<%=request.getContextPath()%>/<%="/clientCenter/app/quality/"+(currentPage-1)%>">上一页</a><%
                         }else{%>
                             <%if (pageTab.equals("QUANTITY")){%>
-                                <a href="<%="/clientCenter/app/quantity/"+(currentPage-1)%>">上一页</a>
+                                <a href="<%=request.getContextPath()%>/<%="/clientCenter/app/quantity/"+(currentPage-1)%>">上一页</a>
                             <%}else {%>
-                                <a href="<%="/clientCenter/app/type/"+(currentPage-1)+"?typeId="+type.getId()%>">上一页</a>
+                                <a href="<%=request.getContextPath()%>/<%="/clientCenter/app/type/"+(currentPage-1)+"?typeId="+type.getId()%>">上一页</a>
                             <%}%>
                         <%}%>
                     <%}%>
@@ -107,15 +107,15 @@
                 %>
 
                     <%if (pageTab.equals("SEARCH")){%>
-                        <li><a href="<%="/clientCenter/app/search/"+j+"?appNameKeyword="+keyword%>" style="color: #f92050"><%=j%></a></li>
+                        <li><a href="<%=request.getContextPath()%>/<%="/clientCenter/app/search/"+j+"?appNameKeyword="+keyword%>" style="color: #f92050"><%=j%></a></li>
                     <%}else{
                         if (pageTab.equals("QUALITY")){%>
-                            <li><a href="<%="/clientCenter/app/quality/"+j%>" style="color: #f92050"><%=j%></a></li><%
+                            <li><a href="<%=request.getContextPath()%>/<%="/clientCenter/app/quality/"+j%>" style="color: #f92050"><%=j%></a></li><%
                         }else{%>
                             <%if (pageTab.equals("QUANTITY")){%>
-                                <li><a href="<%="/clientCenter/app/quantity/"+j%>" style="color: #f92050"><%=j%></a></li>
+                                <li><a href="<%=request.getContextPath()%>/<%="/clientCenter/app/quantity/"+j%>" style="color: #f92050"><%=j%></a></li>
                             <%}else {%>
-                                <li><a href="<%="/clientCenter/app/type/"+j+"?typeId="+type.getId()%>" style="color: #f92050"><%=j%></a></li>
+                                <li><a href="<%=request.getContextPath()%>/<%="/clientCenter/app/type/"+j+"?typeId="+type.getId()%>" style="color: #f92050"><%=j%></a></li>
                             <%}%>
                         <%}%>
                     <%}%>
@@ -123,15 +123,15 @@
                         <%} else {%>
 
                         <%if (pageTab.equals("SEARCH")){%>
-                            <li><a href="<%="/clientCenter/app/search/"+j+"?appNameKeyword="+keyword%>"><%=j%></a></li>
+                            <li><a href="<%=request.getContextPath()%>/<%="/clientCenter/app/search/"+j+"?appNameKeyword="+keyword%>"><%=j%></a></li>
                         <%}else{
                             if (pageTab.equals("QUALITY")){%>
-                                <li><a href="<%="/clientCenter/app/quality/"+j%>"><%=j%></a></li><%
+                                <li><a href="<%=request.getContextPath()%>/<%="/clientCenter/app/quality/"+j%>"><%=j%></a></li><%
                             }else{%>
                                 <%if (pageTab.equals("QUANTITY")){%>
-                                    <li><a href="<%="/clientCenter/app/quantity/"+j%>"><%=j%></a></li>
+                                    <li><a href="<%=request.getContextPath()%>/<%="/clientCenter/app/quantity/"+j%>"><%=j%></a></li>
                                 <%}else {%>
-                                    <li><a href="<%="/clientCenter/app/type/"+j+"?typeId="+type.getId()%>"><%=j%></a></li>
+                                    <li><a href="<%=request.getContextPath()%>/<%="/clientCenter/app/type/"+j+"?typeId="+type.getId()%>"><%=j%></a></li>
                                 <%}%>
                             <%}%>
                         <%}%>
@@ -145,15 +145,15 @@
                 %>
                 <li>
                         <%if (pageTab.equals("SEARCH")){%>
-                            <a href="<%="/clientCenter/app/search/"+(currentPage+1)+"?appNameKeyword="+keyword%>">下一页</a>
+                            <a href="<%=request.getContextPath()%>/<%="/clientCenter/app/search/"+(currentPage+1)+"?appNameKeyword="+keyword%>">下一页</a>
                         <%}else{
                             if (pageTab.equals("QUALITY")){%>
-                                <a href="<%="/clientCenter/app/quality/"+(currentPage+1)%>">下一页</a>
+                                <a href="<%=request.getContextPath()%>/<%="/clientCenter/app/quality/"+(currentPage+1)%>">下一页</a>
                             <%}else{%>
                                 <%if (pageTab.equals("QUANTITY")){%>
-                                    <a href="<%="/clientCenter/app/quantity/"+(currentPage+1)%>">下一页</a>
+                                    <a href="<%=request.getContextPath()%>/<%="/clientCenter/app/quantity/"+(currentPage+1)%>">下一页</a>
                                 <%}else {%>
-                                    <a href="<%="/clientCenter/app/type/"+(currentPage+1)+"?typeId="+type.getId()%>">下一页</a>
+                                    <a href="<%=request.getContextPath()%>/<%="/clientCenter/app/type/"+(currentPage+1)+"?typeId="+type.getId()%>">下一页</a>
                                 <%}%>
                             <%}%>
                         <%}%>

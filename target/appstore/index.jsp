@@ -6,8 +6,7 @@
     <%@include file="WEB-INF/common/head.jsp" %>
 </head>
 <body>
-<%--<a id="getIndexPageData" href="/clientCenter/indexPage/getData">获取首页数据</a>--%>
-<form id="getIndexPageData" action="/clientCenter/indexPage/getData" method="get"></form>
+<form id="getIndexPageData" action="<%=request.getContextPath()%>/clientCenter/indexPage/getData" method="get"></form>
 </body>
 <script>
     $(function () {
