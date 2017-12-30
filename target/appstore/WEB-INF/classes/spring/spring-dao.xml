@@ -24,7 +24,7 @@
         <!--关闭后不自动commit-->
         <property name="autoCommitOnClose" value="false"/>
         <!--获取连接超时时间-->
-        <property name="checkoutTimeout" value="10000000"/>
+        <property name="checkoutTimeout" value="1000000000"/>
         <!--当前获取连接失败重试次数-->
         <property name="acquireRetryAttempts" value="10"/>
     </bean>
