@@ -6,11 +6,11 @@
     <%@include file="WEB-INF/common/head.jsp" %>
 </head>
 <body>
-<form id="getIndexPageData" action="<%=request.getContextPath()%>/clientCenter/indexPage/getData" method="get"></form>
+<a href="<%=request.getContextPath()%>/clientCenter/indexPage/getData"><span id="getIndexPageData"></span></a>
 </body>
 <script>
     $(function () {
-        $('#getIndexPageData').submit();
+        $('#getIndexPageData').click();
     });
 </script>
 </html>
