@@ -151,7 +151,8 @@ public class ManagerController {
             if (appFile.getSize() > 0) {
                 FileUtils.copyInputStreamToFile(appFile.getInputStream(), new File(realPath + "/" + appFile.getOriginalFilename()));
                 app.setFileName(appFile.getOriginalFilename());
-                app.setFilePath(request.getContextPath() + "/upload/");
+//                app.setFilePath(request.getContextPath() + "/upload/");
+                app.setFilePath("/upload/");
                 app.setUpdateTime(new Date());
             }
 
