@@ -27,7 +27,8 @@
         <property name="checkoutTimeout" value="1000000000"/>
         <!--当前获取连接失败重试次数-->
         <property name="acquireRetryAttempts" value="10"/>
-
+        <!--每2小时检查所有连接池中的空闲连接。防止mysql wait_timeout（默认的为8小时） -->
+        <property name="idleConnectionTestPeriod" value="7200"/>
     </bean>
 
     <!--配置sqlSessionFactory-->

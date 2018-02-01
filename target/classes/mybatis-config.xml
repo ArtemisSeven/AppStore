@@ -11,5 +11,7 @@
         <setting name="useColumnLabel" value="true"/>
         <!--表的列名转换成实体类的属性名时使用驼峰命名法(create_time)->(createTime)-->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
+
     </settings>
+
 </configuration>
